@@ -1,0 +1,62 @@
+img {
+    max-width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin: 4rem 0;
+
+    &__sub-text {
+        margin-top: 1rem;
+    }
+}
+
+.col {
+    border-radius: 5px;
+
+    &+& {
+        margin-top: 1.5rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem 1.5rem;
+        
+    }
+
+    &__image-icon {
+        align-self: flex-end;
+        width: 60px;
+        margin-top: 3rem;
+    }
+}
+
+@supports (gap: 20px) {
+    
+    .col + .col {
+        margin: 0;
+    }
+    
+    .main{
+        gap: 20px;
+    }
+    
+}
+
+.footer {
+    text-align: center;
+    width: 80%;
+    margin: 2rem auto;
+}
+
