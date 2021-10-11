@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+body {
+  color: #a3a5ae;
+}
+
+.header__main-title,
+.col__title {
+  color: #4c4e61;
+}
+
+.col {
+  background-color: #fff;
+  filter: drop-shadow(0px 15px 8px rgba(163, 165, 174, 0.3));
+}
+
+.supervisor {
+  border-top: 3px solid #45d3d3;
+}
+
+.teambuilder {
+  border-top: 3px solid #ea5353;
+}
+
+.karma {
+  border-top: 3px solid #fcaf4a;
+}
+
+.calculator {
+  border-top: 3px solid #549ef2;
+}
+
+.attribution {
+  color: #3e52a3;
+}
+.attribution__link {
+  color: #3e52a3;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.94rem;
+}
+
+.header__sub-title {
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.8rem);
+  font-weight: 200;
+}
+.header__main-title {
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.8rem);
+}
+.header__sub-text {
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1rem);
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.col__title {
+  font-size: clamp(1.2rem, 1vw + 1rem, 1.5rem);
+}
+.col__sub-text {
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1rem);
+  line-height: 1.6;
+}
+
+.attribution__link {
+  font-size: clamp(0.7rem, 1vw + 1rem, 0.9rem);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin: 4rem 0;
+}
+.header__sub-text {
+  margin-top: 1rem;
+}
+
+.col {
+  border-radius: 5px;
+}
+.col + .col {
+  margin-top: 1.5rem;
+}
+.col__content {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1.5rem;
+}
+.col__image-icon {
+  align-self: flex-end;
+  width: 60px;
+  margin-top: 3rem;
+}
+
+@supports (gap: 20px) {
+  .col + .col {
+    margin: 0;
+  }
+
+  .main {
+    gap: 20px;
+  }
+}
+.footer {
+  text-align: center;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+@media (min-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    flex: 1;
+    flex-basis: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto repeat(2, auto) auto;
+    grid-template-areas: ". teambuilder ." "supervisor teambuilder calculator" "supervisor karma calculator" ". karma .";
+  }
+
+  .col > * {
+    height: 200px;
+  }
+
+  .supervisor {
+    grid-area: supervisor;
+  }
+
+  .teambuilder {
+    grid-area: teambuilder;
+  }
+
+  .karma {
+    grid-area: karma;
+  }
+
+  .calculator {
+    grid-area: calculator;
+  }
+
+  .col__content {
+    position: relative;
+  }
+  .col__image-icon {
+    position: absolute;
+    bottom: 0;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
